@@ -9,4 +9,24 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ProductoCarneControllerServlet</display-name>
+    <servlet-name>ProductoCarneControllerServlet</servlet-name>
+    <servlet-class>co.edu.unbosque.controller.ProductoCarneControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductoCarneControllerServlet</servlet-name>
+    <url-pattern>/ProductoCarneControllerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductoFrutaControllerServlet</display-name>
+    <servlet-name>ProductoFrutaControllerServlet</servlet-name>
+    <servlet-class>co.edu.unbosque.controller.ProductoFrutaControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductoFrutaControllerServlet</servlet-name>
+    <url-pattern>/ProductoFrutaControllerServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
