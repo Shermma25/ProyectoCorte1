@@ -29,4 +29,34 @@
     <servlet-name>ProductoFrutaControllerServlet</servlet-name>
     <url-pattern>/ProductoFrutaControllerServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductoRandomControllerServlet</display-name>
+    <servlet-name>ProductoRandomControllerServlet</servlet-name>
+    <servlet-class>co.edu.unbosque.controller.ProductoRandomControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductoRandomControllerServlet</servlet-name>
+    <url-pattern>/ProductoRandomControllerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductoVegetalControllerServlet</display-name>
+    <servlet-name>ProductoVegetalControllerServlet</servlet-name>
+    <servlet-class>co.edu.unbosque.controller.ProductoVegetalControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductoVegetalControllerServlet</servlet-name>
+    <url-pattern>/ProductoVegetalControllerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductoJugueteControllerServlet</display-name>
+    <servlet-name>ProductoJugueteControllerServlet</servlet-name>
+    <servlet-class>co.edu.unbosque.controller.ProductoJugueteControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductoJugueteControllerServlet</servlet-name>
+    <url-pattern>/ProductoJugueteControllerServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

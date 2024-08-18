@@ -11,11 +11,11 @@ public class ProductoJugueteDTO extends Juguete {
 		super();
 	}
 
-	public ProductoJugueteDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, int edadMinima,
-			int numJugadores) {
+	public ProductoJugueteDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, int numJugadores,
+			int edadMinima) {
 		super(numJugadores, edadMinima);
 		UID = uID;
-		this.numLote = randomNum();
+		this.numLote = numLote;
 		this.numUnidades = numUnidades;
 		this.nombreP = nombreP;
 		this.empresa = empresa;
@@ -64,12 +64,6 @@ public class ProductoJugueteDTO extends Juguete {
 
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
-	}
-
-	@Override
-	public String toString() {
-		return "ProductoJugueteDTO [UID=" + UID + ", numLote=" + numLote + ", numUnidades=" + numUnidades + ", nombreP="
-				+ nombreP + ", empresa=" + empresa + "]";
 	}
 
 }
