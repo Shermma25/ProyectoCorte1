@@ -47,13 +47,14 @@ public class ProductoFrutaDAO implements CRUDOperation<ProductoFrutaDTO> {
 		return listaFrutas.size();
 	}
 
-	@Override
-	public int actualizar(int index, ProductoFrutaDTO nuevoDato) {
-		if (listaFrutas.set(index, nuevoDato) != null) {
-			return 1;
-		} else {
-			return 0;
+	public int actualizar(int UID, ProductoFrutaDTO nuevoDato) {
+		for (int i = 0; i < listaFrutas.size(); i++) {
+			if (listaFrutas.get(i).getUID() == UID) {
+				listaFrutas.set(i, nuevoDato);
+				return 1;
+			}
 		}
+		return 0;
 	}
 
 	public ArrayList<ProductoFrutaDTO> getListaFrutas() {

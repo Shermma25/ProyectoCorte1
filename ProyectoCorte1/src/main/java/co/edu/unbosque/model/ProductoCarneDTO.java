@@ -14,7 +14,7 @@ public class ProductoCarneDTO extends Carne {
 	public ProductoCarneDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, String fechaVen,
 			String animalOrigen) {
 		super(animalOrigen);
-		UID = uID;
+		this.UID = uID;
 		this.numLote = randomNum();
 		this.numUnidades = numUnidades;
 		this.nombreP = nombreP;
@@ -39,9 +39,9 @@ public class ProductoCarneDTO extends Carne {
 		return randomNum();
 	}
 
-	public void setNumLote(int numLote) {
-		this.numLote = numLote;
-	}
+//	public void setNumLote(int numLote) {
+//		this.numLote = numLote;
+//	}
 
 	public int getNumUnidades() {
 		return numUnidades;

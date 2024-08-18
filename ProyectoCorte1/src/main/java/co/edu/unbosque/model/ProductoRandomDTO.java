@@ -38,9 +38,9 @@ public class ProductoRandomDTO {
 		return randomNum();
 	}
 
-	public void setNumLote(int numLote) {
-		this.numLote = numLote;
-	}
+//	public void setNumLote(int numLote) {
+//		this.numLote = numLote;
+//	}
 
 	public int getNumUnidades() {
 		return numUnidades;

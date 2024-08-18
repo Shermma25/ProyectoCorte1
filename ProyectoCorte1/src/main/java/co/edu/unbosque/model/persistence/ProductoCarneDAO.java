@@ -47,13 +47,14 @@ public class ProductoCarneDAO implements CRUDOperation<ProductoCarneDTO> {
 		return listaCarnesFrias.size();
 	}
 
-	@Override
-	public int actualizar(int index, ProductoCarneDTO nuevoDato) {
-		if (listaCarnesFrias.set(index, nuevoDato) != null) {
-			return 1;
-		} else {
-			return 0;
+	public int actualizar(int UID, ProductoCarneDTO nuevoDato) {
+		for (int i = 0; i < listaCarnesFrias.size(); i++) {
+			if (listaCarnesFrias.get(i).getUID() == UID) {
+				listaCarnesFrias.set(i, nuevoDato);
+				return 1;
+			}
 		}
+		return 0;
 	}
 
 	public ArrayList<ProductoCarneDTO> getListaCarnesFrias() {

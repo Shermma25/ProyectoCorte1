@@ -61,4 +61,18 @@ public class ProductoJugueteControllerServlet extends HttpServlet {
 		facade.getProductoJugueteDAO().eliminar(UID);
 	}
 
+	protected void doPutActualizar(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		int UIDviejo = Integer.parseInt(req.getParameter("UIDviejo"));
+		int UID = Integer.parseInt(req.getParameter("UID"));
+		int numLote = Integer.parseInt(req.getParameter("numLote"));
+		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
+		String nombreP = req.getParameter("nombreP");
+		String empresa = req.getParameter("empresa");
+		int edadMinima = Integer.parseInt(req.getParameter("edadMinima"));
+		int numJugadores = Integer.parseInt(req.getParameter("numJugadores"));
+		facade.getProductoJugueteDAO().actualizar(UIDviejo,
+				new ProductoJugueteDTO(UID, numLote, numUnidades, nombreP, empresa, edadMinima, numJugadores));
+	}
+
 }

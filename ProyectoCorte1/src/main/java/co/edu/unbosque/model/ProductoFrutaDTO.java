@@ -39,9 +39,9 @@ public class ProductoFrutaDTO extends VegetalYFruta {
 		return numLote;
 	}
 
-	public void setNumLote(int numLote) {
-		this.numLote = numLote;
-	}
+//	public void setNumLote(int numLote) {
+//		this.numLote = numLote;
+//	}
 
 	public int getNumUnidades() {
 		return numUnidades;

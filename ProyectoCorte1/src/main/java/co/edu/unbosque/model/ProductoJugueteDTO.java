@@ -38,9 +38,9 @@ public class ProductoJugueteDTO extends Juguete {
 		return numLote;
 	}
 
-	public void setNumLote(int numLote) {
-		this.numLote = numLote;
-	}
+//	public void setNumLote(int numLote) {
+//		this.numLote = numLote;
+//	}
 
 	public int getNumUnidades() {
 		return numUnidades;

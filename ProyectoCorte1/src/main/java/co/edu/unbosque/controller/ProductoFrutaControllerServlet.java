@@ -80,11 +80,18 @@ public class ProductoFrutaControllerServlet extends HttpServlet {
 		req.getRequestDispatcher("/frutas.jsp").forward(req, resp);
 	}
 
-	@Override
-	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
-		out.write("yo soy el metodo delete");
-		out.close();
+	protected void doPutActualizar(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int UIDviejo = Integer.parseInt(req.getParameter("UIDviejo"));
+		int UID = Integer.parseInt(req.getParameter("UID"));
+		int numLote = Integer.parseInt(req.getParameter("numLote"));
+		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
+		String nombreP = req.getParameter("nombreP");
+		String empresa = req.getParameter("empresa");
+		String fechaVen = req.getParameter("fechaVen");
+		String fechaCosecha = req.getParameter("fechaCosecha");
+		boolean organico = "true".equalsIgnoreCase(req.getParameter("organico"));
+		facade.getProductoFrutaDAO().actualizar(UIDviejo,
+				new ProductoFrutaDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen, fechaCosecha, organico));
 	}
 
 	@Override

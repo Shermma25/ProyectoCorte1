@@ -63,4 +63,19 @@ public class ProductoVegetalControllerServlet extends HttpServlet {
 		facade.getProductoVegetalDAO().eliminar(UID);
 	}
 
+	protected void doPutActualizar(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		int UIDviejo = Integer.parseInt(req.getParameter("UIDviejo"));
+		int UID = Integer.parseInt(req.getParameter("UID"));
+		int numLote = Integer.parseInt(req.getParameter("numLote"));
+		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
+		String nombreP = req.getParameter("nombreP");
+		String empresa = req.getParameter("empresa");
+		String fechaVen = req.getParameter("fechaVen");
+		String fechaCosecha = req.getParameter("fechaCosecha");
+		boolean organico = "true".equalsIgnoreCase(req.getParameter("organico"));
+		facade.getProductoVegetalDAO().actualizar(UIDviejo,
+				new ProductoVegetalDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen, fechaCosecha, organico));
+	}
+
 }

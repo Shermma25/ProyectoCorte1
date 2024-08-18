@@ -2,6 +2,7 @@ package co.edu.unbosque.model.persistence;
 
 import java.util.ArrayList;
 
+import co.edu.unbosque.model.ProductoCarneDTO;
 import co.edu.unbosque.model.ProductoRandomDTO;
 
 public class ProductoRandomDAO implements CRUDOperation<ProductoRandomDTO> {
@@ -47,13 +48,14 @@ public class ProductoRandomDAO implements CRUDOperation<ProductoRandomDTO> {
 		return listaRandoms.size();
 	}
 
-	@Override
-	public int actualizar(int index, ProductoRandomDTO nuevoDato) {
-		if (listaRandoms.set(index, nuevoDato) != null) {
-			return 1;
-		} else {
-			return 0;
+	public int actualizar(int UID, ProductoRandomDTO nuevoDato) {
+		for (int i = 0; i < listaRandoms.size(); i++) {
+			if (listaRandoms.get(i).getUID() == UID) {
+				listaRandoms.set(i, nuevoDato);
+				return 1;
+			}
 		}
+		return 0;
 	}
 
 	public ArrayList<ProductoRandomDTO> getListaRandoms() {
