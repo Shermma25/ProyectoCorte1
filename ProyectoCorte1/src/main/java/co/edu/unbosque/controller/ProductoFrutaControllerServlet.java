@@ -19,11 +19,17 @@ public class ProductoFrutaControllerServlet extends HttpServlet {
 		facade = new Facade();
 	}
 
-	@Override
-	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
-		out.write("yo soy el metodo delete");
-		out.close();
+	protected void doDeleteIndex(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		resp.setContentType("text/plain");
+		int index = Integer.parseInt(req.getParameter("index"));
+		facade.getProductoFrutaDAO().eliminar(index);
+	}
+
+	protected void doDeleteUID(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/plain");
+		int UID = Integer.parseInt(req.getParameter("UID"));
+		facade.getProductoFrutaDAO().eliminar(UID);
 	}
 
 	@Override

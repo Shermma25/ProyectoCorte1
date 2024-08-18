@@ -48,4 +48,17 @@ public class ProductoJugueteControllerServlet extends HttpServlet {
 		req.getRequestDispatcher("/juguete.jsp").forward(req, resp);
 	}
 
+	protected void doDeleteIndex(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		resp.setContentType("text/plain");
+		int index = Integer.parseInt(req.getParameter("index"));
+		facade.getProductoJugueteDAO().eliminar(index);
+	}
+
+	protected void doDeleteUID(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/plain");
+		int UID = Integer.parseInt(req.getParameter("UID"));
+		facade.getProductoJugueteDAO().eliminar(UID);
+	}
+
 }
