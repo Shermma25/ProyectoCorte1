@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 15vh;
+  /* Ajusta la altura mínima del header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centra el contenido horizontalmente */
+  background-color: #000000;
+  padding: 0 20px;
+  
+  /* Añade un poco de padding a los lados */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.logo img {
+  height: 60px;
+  /* Ajusta la altura del logo */
+  width: auto;
+  /* Mantén el aspecto del logo */
+}
+
+.menu .navbar ul {
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente los elementos */
+  margin: 0;
+  /* Elimina márgenes para alineación precisa */
+}
+
+.menu .navbar ul li {
+  margin: 0 10px;
+  /* Ajusta el margen entre los botones */
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  /* Ajusta el tamaño del texto de los botones */
+  padding: 10px 20px;
+  /* Ajusta el padding para los botones */
+  color: black;
+  display: block;
+  text-align: center;
+  /* Alinea el texto de los botones al centro */
+}
+
+.menu .navbar ul li a:hover {
+  color: #ffd500;
+  /* Color de hover */
+}
+
+.menu .navbar ul li .btn {
+  font-size: 20px;
+  /* Ajusta el tamaño del texto de los botones */
+  padding: 10px 20px;
+  /* Ajusta el padding para los botones */
+  border-radius: 30px;
+}
+
+.menu .navbar ul {
+  margin-top: 0;
+  /* Elimina el margen superior */
+}
+
+.back-button {
+  border-radius: 30px;
+  background-color: #ffd500;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  /* Ajusta el padding para que coincida con los otros botones */
+}
+
+
+
+.btn-desplegable {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-navbar {
+  background-color: transparent;
+  border: 2px solid #ffcd39;
+  /* Mismo borde que el botón "Volver" */
+  color: #000;
+  /* Color del texto */
+  font-size: 16px;
+  /* Mismo tamaño de fuente */
+  padding: 10px 20px;
+  border-radius: 40px;
+  /* Mismo radio de borde */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn-navbar i {
+  margin-left: 10px;
+}
+
+.btn-navbar-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 2px solid #ffcd39;
+  /* Mismo borde que el botón */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.btn-navbar-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  /* Color del texto */
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fondo transparente */
+  transition: background-color 0.3s ease;
+  /* Transición suave para el hover */
+}
+
+.btn-navbar-content a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Fondo más transparente al pasar el ratón */
+  color: #000;
+  /* Color del texto al pasar el ratón */
+}
+
+.btn-desplegable:hover .btn-navbar-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .menu .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .btn-navbar {
+    width: 100%;
+    text-align: left;
+  }
+
+  .carousel-inner img {
+    height: auto;
+  }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 20px;
+  }
+
+  .menu .navbar ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu .navbar ul li {
+    margin: 0 15px;
+  }
+
+  .carousel-inner img {
+    height: 400px;
+  }
+}

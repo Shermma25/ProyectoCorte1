@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1F1F1F;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 22vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 0 20px; /* Padding para alinear contenido */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff700;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-right: auto; /* Alinea el logo a la izquierda */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Alinea el navbar a la derecha */
+}
+
+.navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 10px; /* Espacio entre los elementos */
+}
+
+.navbar ul li a {
+  font-size: 16px; /* Tamaño de fuente reducido para la barra de navegación */
+  padding: 8px 15px; /* Padding ajustado para los enlaces */
+  color: black;
+  display: block;
+  text-align: center;
+  border-radius: 30px; /* Bordes redondeados */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.navbar ul li a:hover {
+  color: #ffd500; /* Color de hover */
+}
+
+.menu-icono {
+  width: 25px;
+  height: auto;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-txt {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.header-txt h1,
+h3 {
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffe800;
+  margin-bottom: 15px;
+}
+
+.header-txt span {
+  font-size: 25px;
+}
+
+.header-txt p {
+  color: #ffffff;
+  padding: 0 250px;
+  margin: 25px 0;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 700;
+  border-radius: 60px;
+}
+
+.btn1:hover {
+  background-color: rgb(0, 66, 189);
+  transition: 0.4s;
+}
+
+.news {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn2 {
+  height: 45px;
+  width: 100px;
+  background: white;
+  margin-left: -10px;
+  border: 2px solid white;
+  font-weight: 600;
+}
+
+.news input {
+  height: 45px;
+  width: 55%;
+  border: 2px solid white;
+  outline: none;
+  background: black;
+  color: white;
+  margin-top: 20px; /* Corregido a 20px */
+  font-weight: 600;
+}
+
+.news::placeholder {
+  color: white;
+}
+
+.news p {
+  margin: 0;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+#slider {
+  padding: 0;
+}
+
+.card {
+  background-color: #171717;
+  color: white;
+}
+
+.card-title {
+  color: #fff;
+}
+
+.card-body .card-text {
+  color: #ffffff;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-header {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 40);
+  font-size: 18px;
+  font-weight: 520;
+}
+
+header,
+.alert {
+  z-index: 100;
+}
+
+.description {
+  height: 25px;
+  overflow: hidden;
+  transition: height .3s ease-in .3s;
+}
+
+.description:hover {
+  height: 80px;
+}
+
+.carrito {
+  min-height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table__productos {
+  display: flex;
+}
+
+.table__productos > img {
+  width: 15rem;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.table__cantidad > input {
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.hide,
+.remove {
+  display: none;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  margin-left: 0;
+  margin-right: 0;
+}
