@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +16,7 @@
 
 <header class="header">
     <div class="menu container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.jsp">
         <img src="Sources/logoExito.png" alt="" width="150" height="150">
       </a>
       <nav class="navbar">
@@ -22,35 +24,35 @@
           <li class="btn-desplegable">
             <button class="btn btn-outline-warning">Registrar <i class="fa-solid fa-chevron-down"></i></button>
             <div class="btn-navbar-content">
-              <a href="crear-Vegetales.html">Vegetales</a>
-              <a href="crear-frutas.html">Frutas</a>
-              <a href="crear-carnes.html">Carnes</a>
-              <a href="crear-juguetes.html">Juguetes</a>
-              <a href="crear-otros.html">Otros</a>
+              <a href="crear-Vegetales.jsp">Vegetales</a>
+              <a href="crear-frutas.jsp">Frutas</a>
+              <a href="crear-carnes.jsp">Carnes</a>
+              <a href="crear-juguetes.jsp">Juguetes</a>
+              <a href="crear-otros.jsp">Otros</a>
             </div>
           </li>
           <li class="btn-desplegable">
             <button class="btn btn-outline-warning">Ver productos <i class="fa-solid fa-chevron-down"></i></button>
             <div class="btn-navbar-content">
-              <a href="ver-vegetales.html">Vegetales</a>
-              <a href="ver-frutas.html">Frutas</a>
-              <a href="ver-carnes.html">Carnes</a>
-              <a href="ver-juguetes.html">Juguetes</a>
-              <a href="ver-otros.html">Otros</a>
-              <a href="ver-todos.html">Todos</a>
+              <a href="ver-vegetales.jsp">Vegetales</a>
+              <a href="ver-frutas.jsp">Frutas</a>
+              <a href="ver-carnes.jsp">Carnes</a>
+              <a href="ver-juguetes.jsp">Juguetes</a>
+              <a href="ver-otros.jsp">Otros</a>
+              <a href="ver-todos.jsp">Todos</a>
             </div>
           </li>
           <li class="btn-desplegable">
             <button class="btn btn-outline-warning">Detalles productos <i class="fa-solid fa-chevron-down"></i></button>
             <div class="btn-navbar-content">
-              <a href="detalleVegetales.html">Vegetales</a>
-              <a href="detalleFrutas.html">Frutas</a>
-              <a href="detalleCarne.html">Carnes</a>
-              <a href="detalleJuguete.html">Juguetes</a>
-              <a href="detalleOtrosProductos.html">Otros</a>
+              <a href="detalleVegetales.jsp">Vegetales</a>
+              <a href="detalleFrutas.jsp">Frutas</a>
+              <a href="detalleCarne.jsp">Carnes</a>
+              <a href="detalleJuguete.jsp">Juguetes</a>
+              <a href="detalleOtrosProductos.jsp">Otros</a>
             </div>
           </li>
-          <li><a href="index.html"><button type="button" class="btn btn-outline-warning">Volver</button></a></li>
+          <li><a href="index.jsp"><button type="button" class="btn btn-outline-warning">Volver</button></a></li>
         </ul>
       </nav>
     </div>

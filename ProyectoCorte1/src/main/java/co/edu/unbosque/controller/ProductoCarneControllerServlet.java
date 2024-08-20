@@ -76,7 +76,7 @@ public class ProductoCarneControllerServlet extends HttpServlet {
 		req.setAttribute("UID", UID);
 		req.setAttribute("fechaVen", fechaVen);
 		req.setAttribute("animalOrigen", animalOrigen);
-		req.getRequestDispatcher("/carnesFrias.jsp").forward(req, resp);
+		req.getRequestDispatcher("/crear-carnes.jsp").forward(req, resp);
 	}
 
 	protected void doPutActualizar(HttpServletRequest req, HttpServletResponse resp)
