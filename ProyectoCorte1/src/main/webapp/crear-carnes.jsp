@@ -43,14 +43,31 @@
 							Ver productos <i class="fa-solid fa-chevron-down"></i>
 						</button>
 						<div class="btn-navbar-content">
-							<a href="ver-vegetales.jsp">Vegetales</a> <a
-								href="ver-frutas.jsp">Frutas</a>
+
+							<form action="ProductoVegetalControllerServlet" method="get">
+								<button type="submit" id="mostrar" href="ver-vegetales.jsp">
+									Vegetales</button>
+							</form>
 
 							<form action="ProductoCarneControllerServlet" method="get">
 								<button type="submit" id="mostrar" href="ver-carnes.jsp">
 									Carnes</button>
 							</form>
-							<a href="ver-juguetes.jsp">Juguetes</a> <a href="ver-otros.jsp">Otros</a>
+
+							<form action="ProductoFrutaControllerServlet" method="get">
+								<button type="submit" id="mostrar" href="ver-frutas.jsp">
+									Frutas</button>
+							</form>
+
+							<form action="ProductoJugueteControllerServlet" method="get">
+								<button type="submit" id="mostrar" href="ver-juguetes.jsp">
+									Juguetes</button>
+							</form>
+
+							<form action="ProductoRandomControllerServlet" method="get">
+								<button type="submit" id="mostrar" href="ver-otros.jsp">
+									Otros</button>
+							</form>
 							<a href="ver-todos.jsp">Todos</a>
 						</div>
 					</li>

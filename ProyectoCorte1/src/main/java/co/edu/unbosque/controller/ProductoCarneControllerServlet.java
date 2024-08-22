@@ -2,6 +2,7 @@ package co.edu.unbosque.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import co.edu.unbosque.model.Facade;
 import co.edu.unbosque.model.ProductoCarneDTO;
@@ -48,11 +49,10 @@ public class ProductoCarneControllerServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
-		for (ProductoCarneDTO e : facade.getProductoCarneDAO().getListaCarnesFrias()) {
-			out.write(e.toString() + "\n");
-		}
-		out.close();
+		ArrayList<ProductoCarneDTO> listaCarnesFrias = facade.getProductoCarneDAO().getListaCarnesFrias();
+		req.setAttribute("listaCarnesFrias", listaCarnesFrias);
+		req.getRequestDispatcher("/ver-carnes.jsp").forward(req, resp);
+
 	}
 
 	@Override

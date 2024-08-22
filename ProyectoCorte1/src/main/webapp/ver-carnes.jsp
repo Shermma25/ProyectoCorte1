@@ -72,6 +72,7 @@
 					<th>ID</th>
 					<th>Nombre del Producto</th>
 					<th>Empresa</th>
+					<th>Numero de lote</th>
 					<th>Animal de Origen</th>
 					<th>Fecha de Vencimiento</th>
 					<th>Número de Unidades</th>
@@ -79,23 +80,37 @@
 				</tr>
 			</thead>
 			<tbody>
-				<!-- Aquí se agregarán las filas de productos registrados -->
 				<%
 				ArrayList<ProductoCarneDTO> listaCarnesFrias = (ArrayList<ProductoCarneDTO>) request.getAttribute("listaCarnesFrias");
-				for (ProductoCarneDTO e : listaCarnesFrias) {
+				if (listaCarnesFrias != null) {
+					for (ProductoCarneDTO e : listaCarnesFrias) {
 				%>
 				<tr>
 					<td><%=e.getUID()%></td>
 					<td><%=e.getNombreP()%></td>
 					<td><%=e.getEmpresa()%></td>
+					<td><%=e.getNumLote()%></td>
 					<td><%=e.getAnimalOrigen()%></td>
 					<td><%=e.getFechaVen()%></td>
 					<td><%=e.getNumUnidades()%></td>
+					<td>
+						<!-- Aquí puedes agregar botones de acción si lo deseas -->
+						<button onclick="editarProducto(<%=e.getUID()%>)"
+							class="btn btn-primary btn-sm">Editar</button>
+						<button onclick="eliminarProducto(<%=e.getUID()%>)"
+							class="btn btn-danger btn-sm">Eliminar</button>
+					</td>
+				</tr>
+				<%
+				}
+				} else {
+				%>
+				<tr>
+					<td colspan="7">No hay productos registrados.</td>
 				</tr>
 				<%
 				}
 				%>
-
 			</tbody>
 		</table>
 		<a href="crear-carnes.jsp" class="btn back-button mt-3">Volver al
