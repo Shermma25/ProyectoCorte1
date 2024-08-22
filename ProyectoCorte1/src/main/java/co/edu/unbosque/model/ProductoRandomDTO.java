@@ -11,7 +11,7 @@ public class ProductoRandomDTO {
 		super();
 	}
 
-	public ProductoRandomDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, String fechaVen) {
+	public ProductoRandomDTO(int uID, int numUnidades, String nombreP, String empresa, String fechaVen) {
 		super();
 		UID = uID;
 		this.numLote = randomNum();

@@ -45,8 +45,7 @@
 				<label><input type="checkbox">Recordar</label> <a href="#">Olvidaste
 					tu contraseña?</a>
 			</div>
-			<a href="index.html"><button type="button"
-					class="btn btn-warning">Acceder</button></a>
+			<a href="index.jsp"><button type="button" class="btn btn-warning">Acceder</button></a>
 			<div class="register-link">
 				<p>
 					No tienes una cuenta? <a href="#">Registrate</a>

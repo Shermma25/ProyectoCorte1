@@ -60,22 +60,22 @@ public class ProductoCarneControllerServlet extends HttpServlet {
 
 		resp.setContentType("text/html");
 		int UID = Integer.parseInt(req.getParameter("UID"));
-		int numLote = Integer.parseInt(req.getParameter("numLote"));
-		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
+//		int numLote = Integer.parseInt(req.getParameter("numLote"));
 		String nombreP = req.getParameter("nombreP");
 		String empresa = req.getParameter("empresa");
-		String fechaVen = req.getParameter("fechaVen");
 		String animalOrigen = req.getParameter("animalOrigen");
+		String fechaVen = req.getParameter("fechaVen");
+		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
 
 		facade.getProductoCarneDAO()
-				.crear(new ProductoCarneDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen, animalOrigen));
+				.crear(new ProductoCarneDTO(UID, numUnidades, nombreP, empresa, fechaVen, animalOrigen));
+		req.setAttribute("UID", UID);
 		req.setAttribute("nombreP", nombreP);
 		req.setAttribute("empresa", empresa);
-		req.setAttribute("numUnidades", numUnidades);
-		req.setAttribute("numLote", numLote);
-		req.setAttribute("UID", UID);
-		req.setAttribute("fechaVen", fechaVen);
 		req.setAttribute("animalOrigen", animalOrigen);
+//		req.setAttribute("numLote", numLote);
+		req.setAttribute("fechaVen", fechaVen);
+		req.setAttribute("numUnidades", numUnidades);
 		req.getRequestDispatcher("/crear-carnes.jsp").forward(req, resp);
 	}
 
@@ -90,7 +90,7 @@ public class ProductoCarneControllerServlet extends HttpServlet {
 		String fechaVen = req.getParameter("fechaVen");
 		String animalOrigen = req.getParameter("animalOrigen");
 		facade.getProductoCarneDAO().actualizar(UIDviejo,
-				new ProductoCarneDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen, animalOrigen));
+				new ProductoCarneDTO(UID, numUnidades, nombreP, empresa, fechaVen, animalOrigen));
 	}
 
 	@Override

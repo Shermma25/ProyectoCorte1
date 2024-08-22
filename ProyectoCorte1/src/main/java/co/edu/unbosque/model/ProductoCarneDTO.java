@@ -11,7 +11,7 @@ public class ProductoCarneDTO extends Carne {
 		super();
 	}
 
-	public ProductoCarneDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, String fechaVen,
+	public ProductoCarneDTO(int uID, int numUnidades, String nombreP, String empresa, String fechaVen,
 			String animalOrigen) {
 		super(animalOrigen);
 		this.UID = uID;

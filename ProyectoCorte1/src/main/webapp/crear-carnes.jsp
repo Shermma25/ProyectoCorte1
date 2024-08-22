@@ -44,7 +44,12 @@
 						</button>
 						<div class="btn-navbar-content">
 							<a href="ver-vegetales.jsp">Vegetales</a> <a
-								href="ver-frutas.jsp">Frutas</a> <a href="ver-carnes.jsp">Carnes</a>
+								href="ver-frutas.jsp">Frutas</a>
+
+							<form action="ProductoCarneControllerServlet" method="get">
+								<button type="submit" id="mostrar" href="ver-carnes.jsp">
+									Carnes</button>
+							</form>
 							<a href="ver-juguetes.jsp">Juguetes</a> <a href="ver-otros.jsp">Otros</a>
 							<a href="ver-todos.jsp">Todos</a>
 						</div>
@@ -68,9 +73,14 @@
 
 	<div class="wrapper" style="margin-top: 20px; padding-top: 0;">
 		<h1>Registro de carnes</h1>
-		<form id="productForm">
+		<form action="ProductoCarneControllerServlet" method="POST"
+			id="productForm">
+
 			<div class="input-box">
-				<input type="text" id="nombre-producto" name="nombre_producto"
+				<input type="text" id="UID" name="UID" placeholder="UID" required>
+			</div>
+			<div class="input-box">
+				<input type="text" id="nombre-producto" name="nombreP"
 					placeholder="Nombre del producto" required>
 			</div>
 			<div class="input-box">
@@ -78,7 +88,7 @@
 					required>
 			</div>
 			<div class="input-box">
-				<select id="es-organico" name="es-organico" required>
+				<select id="origen-animal" name="animalOrigen" required>
 					<option value="" disabled selected>Animal de origen</option>
 					<option value="res">Res</option>
 					<option value="cerdo">Cerdo</option>
@@ -90,61 +100,18 @@
 			</div>
 			<div class="input-box">
 				<label for="fecha-caducidad">Fecha de caducidad:</label> <input
-					type="date" id="fecha-caducidad" name="fecha_caducidad" required>
+					type="date" id="fecha-caducidad" name="fechaVen" required>
 			</div>
 			<div class="input-box">
-				<label for="fecha-cosecha">Fecha de cosecha:</label> <input
-					type="date" id="fecha-cosecha" name="fecha_cosecha" required>
-			</div>
-			<div class="input-box">
-				<input type="number" id="num-unidades" name="num_unidades"
+				<input type="number" id="num-unidades" name="numUnidades"
 					placeholder="Número de unidades" required>
 			</div>
 			<div class="buttons">
-				<button type="submit" class="btn btn-warning">Registrar
+				<button type="submit" value="ENVIAR" class="btn btn-warning">Registrar
 					Producto</button>
 			</div>
 		</form>
 	</div>
 
-	<script>
-		document.getElementById('productForm')
-				.addEventListener(
-						'submit',
-						function(event) {
-							event.preventDefault();
-
-							const productName = document
-									.getElementById('nombre-producto').value;
-							const companyName = document
-									.getElementById('empresa').value;
-							const isOrganic = document
-									.getElementById('es-organico').value;
-							const expirationDate = document
-									.getElementById('fecha-caducidad').value;
-							const harvestDate = document
-									.getElementById('fecha-cosecha').value;
-							const units = document
-									.getElementById('num-unidades').value;
-
-							const products = JSON.parse(localStorage
-									.getItem('products'))
-									|| [];
-							const newProduct = {
-								id : products.length + 1,
-								name : productName,
-								company : companyName,
-								isOrganic : isOrganic,
-								expirationDate : expirationDate,
-								harvestDate : harvestDate,
-								units : units
-							};
-
-							products.push(newProduct);
-							localStorage.setItem('products', JSON
-									.stringify(products));
-							window.location.href = 'ver-carnes.html';
-						});
-	</script>
 </body>
 </html>

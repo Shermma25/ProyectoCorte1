@@ -30,7 +30,7 @@ public class ProductoVegetalControllerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
 		int UID = Integer.parseInt(req.getParameter("UID"));
-		int numLote = Integer.parseInt(req.getParameter("numLote"));
+//		int numLote = Integer.parseInt(req.getParameter("numLote"));
 		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
 		String nombreP = req.getParameter("nombreP");
 		String empresa = req.getParameter("empresa");
@@ -38,11 +38,11 @@ public class ProductoVegetalControllerServlet extends HttpServlet {
 		String fechaCosecha = req.getParameter("fechaCosecha");
 		boolean organico = "true".equalsIgnoreCase(req.getParameter("organico"));
 		facade.getProductoVegetalDAO().crear(
-				new ProductoVegetalDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen, fechaCosecha, organico));
+				new ProductoVegetalDTO(UID, numUnidades, nombreP, empresa, fechaVen, fechaCosecha, organico));
 		req.setAttribute("nombreP", nombreP);
 		req.setAttribute("empresa", empresa);
 		req.setAttribute("numUnidades", numUnidades);
-		req.setAttribute("numLote", numLote);
+//		req.setAttribute("numLote", numLote);
 		req.setAttribute("UID", UID);
 		req.setAttribute("fechaVen", fechaVen);
 		req.setAttribute("fechaCosecha", fechaCosecha);
@@ -67,7 +67,7 @@ public class ProductoVegetalControllerServlet extends HttpServlet {
 			throws ServletException, IOException {
 		int UIDviejo = Integer.parseInt(req.getParameter("UIDviejo"));
 		int UID = Integer.parseInt(req.getParameter("UID"));
-		int numLote = Integer.parseInt(req.getParameter("numLote"));
+//		int numLote = Integer.parseInt(req.getParameter("numLote"));
 		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
 		String nombreP = req.getParameter("nombreP");
 		String empresa = req.getParameter("empresa");
@@ -75,7 +75,7 @@ public class ProductoVegetalControllerServlet extends HttpServlet {
 		String fechaCosecha = req.getParameter("fechaCosecha");
 		boolean organico = "true".equalsIgnoreCase(req.getParameter("organico"));
 		facade.getProductoVegetalDAO().actualizar(UIDviejo,
-				new ProductoVegetalDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen, fechaCosecha, organico));
+				new ProductoVegetalDTO(UID, numUnidades, nombreP, empresa, fechaVen, fechaCosecha, organico));
 	}
 
 }

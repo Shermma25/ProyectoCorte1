@@ -11,7 +11,7 @@ public class ProductoJugueteDTO extends Juguete {
 		super();
 	}
 
-	public ProductoJugueteDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, int numJugadores,
+	public ProductoJugueteDTO(int uID, int numUnidades, String nombreP, String empresa, int numJugadores,
 			int edadMinima) {
 		super(numJugadores, edadMinima);
 		UID = uID;

@@ -104,44 +104,5 @@
 		</form>
 	</div>
 
-	<script>
-		document.getElementById('productForm')
-				.addEventListener(
-						'submit',
-						function(event) {
-							event.preventDefault();
-
-							const productName = document
-									.getElementById('nombre-producto').value;
-							const companyName = document
-									.getElementById('empresa').value;
-							const isOrganic = document
-									.getElementById('es-organico').value;
-							const expirationDate = document
-									.getElementById('fecha-caducidad').value;
-							const harvestDate = document
-									.getElementById('fecha-cosecha').value;
-							const units = document
-									.getElementById('num-unidades').value;
-
-							const products = JSON.parse(localStorage
-									.getItem('products'))
-									|| [];
-							const newProduct = {
-								id : products.length + 1,
-								name : productName,
-								company : companyName,
-								isOrganic : isOrganic,
-								expirationDate : expirationDate,
-								harvestDate : harvestDate,
-								units : units
-							};
-
-							products.push(newProduct);
-							localStorage.setItem('products', JSON
-									.stringify(products));
-							window.location.href = 'dashboard.html';
-						});
-	</script>
 </body>
 </html>

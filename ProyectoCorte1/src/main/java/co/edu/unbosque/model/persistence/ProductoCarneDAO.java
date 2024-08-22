@@ -64,5 +64,7 @@ public class ProductoCarneDAO implements CRUDOperation<ProductoCarneDTO> {
 	public void setListaCarnesFrias(ArrayList<ProductoCarneDTO> listaCarnesFrias) {
 		this.listaCarnesFrias = listaCarnesFrias;
 	}
+	
+	
 
 }

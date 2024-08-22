@@ -59,17 +59,16 @@ public class ProductoRandomControllerServlet extends HttpServlet {
 
 		resp.setContentType("text/html");
 		int UID = Integer.parseInt(req.getParameter("UID"));
-		int numLote = Integer.parseInt(req.getParameter("numLote"));
+//		int numLote = Integer.parseInt(req.getParameter("numLote"));
 		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
 		String nombreP = req.getParameter("nombreP");
 		String empresa = req.getParameter("empresa");
 		String fechaVen = req.getParameter("fechaVen");
-		facade.getProductoRandomDAO()
-				.crear(new ProductoRandomDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen));
+		facade.getProductoRandomDAO().crear(new ProductoRandomDTO(UID, numUnidades, nombreP, empresa, fechaVen));
 		req.setAttribute("nombreP", nombreP);
 		req.setAttribute("empresa", empresa);
 		req.setAttribute("numUnidades", numUnidades);
-		req.setAttribute("numLote", numLote);
+//		req.setAttribute("numLote", numLote);
 		req.setAttribute("UID", UID);
 		req.setAttribute("fechaVen", fechaVen);
 		req.getRequestDispatcher("/random.jsp").forward(req, resp);
@@ -79,13 +78,13 @@ public class ProductoRandomControllerServlet extends HttpServlet {
 			throws ServletException, IOException {
 		int UIDviejo = Integer.parseInt(req.getParameter("UIDviejo"));
 		int UID = Integer.parseInt(req.getParameter("UID"));
-		int numLote = Integer.parseInt(req.getParameter("numLote"));
+//		int numLote = Integer.parseInt(req.getParameter("numLote"));
 		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
 		String nombreP = req.getParameter("nombreP");
 		String empresa = req.getParameter("empresa");
 		String fechaVen = req.getParameter("fechaVen");
 		facade.getProductoRandomDAO().actualizar(UIDviejo,
-				new ProductoRandomDTO(UID, numLote, numUnidades, nombreP, empresa, fechaVen));
+				new ProductoRandomDTO(UID, numUnidades, nombreP, empresa, fechaVen));
 	}
 
 	@Override

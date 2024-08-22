@@ -30,16 +30,16 @@ public class ProductoJugueteControllerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
 		int UID = Integer.parseInt(req.getParameter("UID"));
-		int numLote = Integer.parseInt(req.getParameter("numLote"));
+//		int numLote = Integer.parseInt(req.getParameter("numLote"));
 		int numUnidades = Integer.parseInt(req.getParameter("numUnidades"));
 		String nombreP = req.getParameter("nombreP");
 		String empresa = req.getParameter("empresa");
 		int edadMinima = Integer.parseInt(req.getParameter("edadMinima"));
 		int numJugadores = Integer.parseInt(req.getParameter("numJugadores"));
 		facade.getProductoJugueteDAO()
-				.crear(new ProductoJugueteDTO(UID, numLote, numUnidades, nombreP, empresa, edadMinima, numJugadores));
+				.crear(new ProductoJugueteDTO(UID, numUnidades, nombreP, empresa, edadMinima, numJugadores));
 		req.setAttribute("UID", UID);
-		req.setAttribute("numLote", numLote);
+//		req.setAttribute("numLote", numLote);
 		req.setAttribute("numUnidades", numUnidades);
 		req.setAttribute("nombreP", nombreP);
 		req.setAttribute("empresa", empresa);
@@ -72,7 +72,7 @@ public class ProductoJugueteControllerServlet extends HttpServlet {
 		int edadMinima = Integer.parseInt(req.getParameter("edadMinima"));
 		int numJugadores = Integer.parseInt(req.getParameter("numJugadores"));
 		facade.getProductoJugueteDAO().actualizar(UIDviejo,
-				new ProductoJugueteDTO(UID, numLote, numUnidades, nombreP, empresa, edadMinima, numJugadores));
+				new ProductoJugueteDTO(UID, numUnidades, nombreP, empresa, edadMinima, numJugadores));
 	}
 
 }

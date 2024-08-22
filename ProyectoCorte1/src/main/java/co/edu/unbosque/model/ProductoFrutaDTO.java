@@ -11,7 +11,7 @@ public class ProductoFrutaDTO extends VegetalYFruta {
 		super();
 	}
 
-	public ProductoFrutaDTO(int uID, int numLote, int numUnidades, String nombreP, String empresa, String fechaVen,
+	public ProductoFrutaDTO(int uID, int numUnidades, String nombreP, String empresa, String fechaVen,
 			String fechaCosecha, boolean organico) {
 		super(organico, fechaCosecha);
 		UID = uID;
